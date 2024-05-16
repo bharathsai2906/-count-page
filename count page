@@ -1,0 +1,88 @@
+HTML...
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="count.css">
+</head>
+<body>
+
+    <h1 id="header">Counter</h1>
+
+    <div class="container">
+
+    <label id="countlabel">0</label><br>
+    <button id="DECREASEbtn">DECREASE</button>
+    <button id="RESETbtn">RESET</button>
+    <button id="INCREASEbtn">INCREASE</button>
+    <script src="count.js"></script>
+
+</div>
+    
+</body>
+</html>
+
+
+  .CSS
+
+  #header{
+    display: block;
+    text-align: center;
+    font-size: 80px;
+}
+
+
+#countlabel{
+    display: block;
+    text-align: center;
+    font-size: 100px;
+
+}
+
+
+#decreasebtn{
+    font-size: 20px;
+    
+}
+
+#resetbtn{
+    font-size: 20px;
+ 
+}
+
+#increasebtn{
+    font-size: 20px;
+    
+}
+
+.container{
+    text-align: center;
+    font-size: 50PX;
+    
+}
+
+
+.JS
+
+let count=0;
+
+document.getElementById("DECREASEbtn").onclick=function(){
+    count-=1;
+    document.getElementById("countlabel").innerHTML=count;
+
+}
+
+document.getElementById("RESETbtn").onclick=function(){
+    count=0;
+    document.getElementById("countlabel").innerHTML=count;
+    
+}
+
+document.getElementById("INCREASEbtn").onclick=function(){
+    count+=1;
+    document.getElementById("countlabel").innerHTML=count;
+    
+}
